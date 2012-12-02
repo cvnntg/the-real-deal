@@ -1,0 +1,31 @@
+package environment;
+
+import javax.swing.*;
+
+import app.*;
+import visual.*;
+
+import bot.FrontBot;
+
+public class DigiEnvironment extends AbstractMultimediaApp
+{
+	FrontBot			bot;
+	JPanel				contentPane;
+	Visualization		visualization;
+	VisualizationView	view;
+	
+	public void init()
+	{
+		visualization = new Visualization();
+		
+		bot = new FrontBot("justFace.png");
+		visualization.add(bot);
+		
+		view = visualization.getView();
+		contentPane = (JPanel)rootPaneContainer.getContentPane();
+		view.setBounds(0, 0, 500, 500);
+		contentPane.add(view);
+	}
+	
+	
+}

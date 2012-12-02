@@ -1,0 +1,32 @@
+import javax.swing.JPanel;
+
+import visual.Visualization;
+import visual.VisualizationView;
+import app.AbstractMultimediaApp;
+import bot.FrontBot;
+import io.ResourceFinder;
+
+
+public class ContentFactoryTester extends AbstractMultimediaApp
+{
+	public static void main(String[] args)
+	{
+		ResourceFinder	finder;
+		visual.statik.sampled.ContentFactory	factory;
+	
+		finder = ResourceFinder.createInstance(this);
+		factory = new visual.statik.sampled.ContentFactory(finder);
+		visual.statik.sampled.Content	face = factory.createContent("justFace.png");
+		
+		Visualization visualization = new Visualization();
+		
+		
+		visualization.add(face);
+		
+		VisualizationView view = visualization.getView();
+		JPanel contentPane = (JPanel)rootPaneContainer.getContentPane();
+		view.setBounds(0, 0, 500, 500);
+		contentPane.add(view);
+	
+	}
+}

@@ -1,0 +1,9 @@
+package bot;
+
+public class AbstractDigiBot 
+{
+	public static void main(String[] args)
+	{
+		System.out.println("LET'S DO THIS!!!");
+	}
+}

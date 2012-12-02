@@ -1,0 +1,10 @@
+import environment.DigiEnvironment;
+
+
+public class DigiBotDriver 
+{
+	public static void main(String[] args)
+	{
+		DigiEnvironment environment = new DigiEnvironment();
+	}
+}

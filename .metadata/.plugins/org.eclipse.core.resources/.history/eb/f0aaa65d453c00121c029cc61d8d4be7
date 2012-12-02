@@ -1,0 +1,48 @@
+package bot;
+
+import java.awt.*;
+
+import io.ResourceFinder;
+import visual.statik.*;
+
+public abstract class AbstractDigiBot extends visual.statik.CompositeContent  
+{
+	public AbstractDigiBot()
+	{
+		super();
+				
+		BasicStroke								stroke;
+		Color									black, maroon, orange;
+		ResourceFinder							finder;
+		visual.statik.described.Content 		head, neck, torso, wheel;
+		visual.statik.sampled.Content			face;
+		visual.statik.sampled.ContentFactory	factory;
+		
+		black	= Color.BLACK; 
+		maroon	= new Color(176, 23, 31);
+		orange 	= new Color(238, 64, 0);
+				
+		stroke = new BasicStroke();
+		
+		head = new visual.statik.described.Content(getHead(), black, orange, stroke);
+		
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	public abstract BufferedImage getFace();
+	public abstract Shape getHead();
+	public abstract Shape getNeck();
+	public abstract Shape getTorso();
+	public abstract Shape getWheel();
+	
+	
+	
+}

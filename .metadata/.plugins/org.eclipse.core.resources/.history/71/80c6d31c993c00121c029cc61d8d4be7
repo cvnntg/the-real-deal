@@ -1,0 +1,16 @@
+import io.ResourceFinder;
+
+
+public class ContentFactoryTester 
+{
+	public static void main(String[] args)
+	{
+		ResourceFinder	finder;
+		visual.statik.sampled.ContentFactory	factory;
+	
+		finder = ResourceFinder.createInstance();
+		factory = new visual.statik.sampled.ContentFactory();
+		visual.statik.sampled.Content	face = factory.createContent("justFae.png");
+	
+	}
+}
