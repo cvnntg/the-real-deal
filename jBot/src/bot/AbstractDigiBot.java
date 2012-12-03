@@ -8,10 +8,14 @@ import visual.statik.*;
 
 public abstract class AbstractDigiBot extends visual.statik.CompositeContent  
 {	
+//	private ArrayList<Action> 		actionList;
+	
 	public AbstractDigiBot(String facePath)
 	{
 		super();
-				
+		
+		//actionList = new ArrayList<Action>();
+						
 		//checks to see if view of bot being constructed has a face
 		boolean hasFace = false;
 		if(facePath != null)
