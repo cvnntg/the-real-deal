@@ -1,37 +1,21 @@
 package bot;
 
-import io.ResourceFinder;
-
-import java.awt.BasicStroke;
-import java.awt.Color;
 import java.awt.Shape;
-import java.awt.Stroke;
 import java.awt.geom.Arc2D;
 import java.awt.geom.Path2D;
 
-import visual.statik.CompositeContent;
-import visual.statik.described.Content;
-
 
 public class FrontBot extends AbstractDigiBot 
-{
-	private String facePath;
-	
+{	
 	public FrontBot(String facePath)
 	{
-		super();
-		this.facePath = facePath;
+		super(facePath);
 	}
 		
-	public CompositeContent getHead(Color color1, Color color2, Stroke stroke)
+	public Shape getHead()
 	{
-		CompositeContent 						wholeHead;
-		Content									head;
-		Path2D.Float 							headShape; 
-		ResourceFinder							finder;
-		visual.statik.sampled.Content			face;
-		visual.statik.sampled.ContentFactory	factory;
-		
+		Path2D.Float headShape; 
+						
 		headShape = new Path2D.Float();
 		headShape.moveTo(15, 0);
 		headShape.lineTo(85, 0);
@@ -39,19 +23,8 @@ public class FrontBot extends AbstractDigiBot
 		headShape.lineTo(15, 80);
 		headShape.lineTo(15, 0);
 		headShape.closePath();
-		
-		stroke = new BasicStroke();
-		head = new Content(headShape, color1, color2, stroke);
 				
-		finder = ResourceFinder.createInstance(this);
-		factory = new visual.statik.sampled.ContentFactory(finder);
-		face = factory.createContent(facePath, 4);
-		
-		wholeHead = new visual.statik.CompositeContent();
-		wholeHead.add(head);
-		wholeHead.add(face);
-		
-		return wholeHead;
+		return headShape;
 	}
 	
 	

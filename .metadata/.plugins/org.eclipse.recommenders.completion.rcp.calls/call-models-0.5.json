@@ -1,0 +1,18 @@
+{
+  "C:\\Users\\Matt\\Desktop\\the-real-deal\\jBot\\src": {
+    "location": "C:\\Users\\Matt\\Desktop\\the-real-deal\\jBot\\src",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027C:\\Users\\Matt\\Desktop\\the-real-deal\\jBot\\src\u0027. Skipped."
+  },
+  "C:\\Program Files\\Java\\jdk1.7.0_09\\jre\\lib\\rt.jar": {
+    "coordinate": "jre:jre:zip:call:1.0.0",
+    "location": "C:\\Program Files\\Java\\jdk1.7.0_09\\jre\\lib\\rt.jar",
+    "status": "RESOLVED",
+    "error": "No class path info available for \u0027C:\\Program Files\\Java\\jdk1.7.0_09\\jre\\lib\\rt.jar\u0027. Skipped."
+  },
+  "C:\\Users\\Matt\\Desktop\\the-real-deal\\jBot\\multimedia.jar": {
+    "location": "C:\\Users\\Matt\\Desktop\\the-real-deal\\jBot\\multimedia.jar",
+    "status": "UNRESOLVED",
+    "error": "No call model found for \u0027C:\\Users\\Matt\\Desktop\\the-real-deal\\jBot\\multimedia.jar\u0027. Neither fingerprint \u00276649a9a011cf1fc205ba572afc9e63d18e70b811\u0027 nor symbolic name \u0027multimedia\u0027 are known."
+  }
+}

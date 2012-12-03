@@ -1,21 +1,27 @@
 package bot;
 
 import java.awt.*;
-import java.awt.image.BufferedImage;
+import java.util.ArrayList;
 
 import io.*;
 import visual.statik.*;
 
 public abstract class AbstractDigiBot extends visual.statik.CompositeContent  
-{
-	public AbstractDigiBot()
+{	
+	public AbstractDigiBot(String facePath)
 	{
 		super();
 				
+		//checks to see if view of bot being constructed has a face
+		boolean hasFace = false;
+		if(facePath != null)
+			hasFace = true;
+				
 		BasicStroke								stroke;
 		Color									black, maroon, orange;
-		visual.statik.CompositeContent			head;
-		visual.statik.described.Content 		neck, torso, wheel;
+		visual.statik.CompositeContent			compositeHead;
+		visual.statik.described.Content 		headShape, neckShape, 
+													torsoShape, wheelShape;
 			
 		black	= Color.BLACK; 
 		maroon	= new Color(176, 23, 31);
@@ -23,21 +29,49 @@ public abstract class AbstractDigiBot extends visual.statik.CompositeContent
 				
 		stroke = new BasicStroke();
 				
-		head = getHead(maroon, orange, stroke);
-		add(head);
+		headShape = new visual.statik.described.Content(getHead(), maroon, 
+															orange, stroke);
+		if (hasFace)
+		{	
+			compositeHead = makeCompositeHead(headShape, facePath);
+			add(compositeHead);
+		}
+		else
+			add(headShape);		
 		
-		neck = new visual.statik.described.Content(getNeck(), maroon, orange, stroke);
-		add(neck);
+		neckShape = new visual.statik.described.Content(getNeck(), maroon, orange, stroke);
+		add(neckShape);
 		
-		torso = new visual.statik.described.Content(getTorso(), maroon, orange, stroke);
-		add(torso);
+		torsoShape = new visual.statik.described.Content(getTorso(), maroon, orange, stroke);
+		add(torsoShape);
 		
-		wheel = new visual.statik.described.Content(getWheel(), maroon, black, stroke);
-		add(wheel);
+		wheelShape = new visual.statik.described.Content(getWheel(), maroon, black, stroke);
+		add(wheelShape);
 			
 	}
 			
-	public abstract CompositeContent getHead(Color color1, Color color2, Stroke stroke);
+	public CompositeContent makeCompositeHead(visual.statik.described.Content headShape,
+												String facePath)
+	{		
+		ResourceFinder							finder;
+		visual.statik.sampled.Content			face;
+		visual.statik.sampled.ContentFactory	factory;
+		visual.statik.CompositeContent 			compositeHead;
+		
+		finder = ResourceFinder.createInstance(this);
+		factory = new visual.statik.sampled.ContentFactory(finder);
+		face = factory.createContent(facePath, 4);
+		
+		compositeHead = new CompositeContent();
+		
+		compositeHead.add(headShape);
+		compositeHead.add(face);
+		
+		
+		return compositeHead;		
+	}	
+	
+	public abstract Shape getHead();
 	public abstract Shape getNeck();
 	public abstract Shape getTorso();
 	public abstract Shape getWheel();

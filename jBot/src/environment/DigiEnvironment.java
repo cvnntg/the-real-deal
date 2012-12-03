@@ -18,7 +18,7 @@ public class DigiEnvironment extends AbstractMultimediaApp
 	{
 		visualization = new Visualization();
 				
-		bot = new FrontBot("justFace.png");
+		bot = new FrontBot("bernsteinSerious.jpg");
 		visualization.add(bot);
 		
 		view = visualization.getView();

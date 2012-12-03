@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.awt.Shape"/>
+<fullyQualifiedTypeName name="java.awt.geom.Path2D"/>
+<fullyQualifiedTypeName name="java.awt.image.BufferedImage"/>
+<fullyQualifiedTypeName name="java.awt.geom.Arc2D"/>
+<fullyQualifiedTypeName name="java.awt.geom.Arc2D.Float"/>
+<fullyQualifiedTypeName name="bot.FrontBot"/>
+<fullyQualifiedTypeName name="visual.Visualization"/>
+<fullyQualifiedTypeName name="environment.DigiEnvironment"/>
+<fullyQualifiedTypeName name="app.MultimediaApplication"/>
+<fullyQualifiedTypeName name="javax.swing.SwingUtilities"/>
+<fullyQualifiedTypeName name="java.awt.geom.Path2D.Float"/>
+<fullyQualifiedTypeName name="java.awt.BasicStroke"/>
+<fullyQualifiedTypeName name="java.awt.Color"/>
+<fullyQualifiedTypeName name="java.awt.Stroke"/>
+<fullyQualifiedTypeName name="io.ResourceFinder"/>
+<fullyQualifiedTypeName name="app.AbstractMultimediaApp"/>
+<fullyQualifiedTypeName name="visual.statik.CompositeContent"/>
+<fullyQualifiedTypeName name="visual.statik.described.Content"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+</qualifiedTypeNameHistroy>
