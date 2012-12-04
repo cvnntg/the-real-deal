@@ -61,6 +61,6 @@ public class FrontBot extends AbstractDigiBot
 		
 	public Shape getWheel()
 	{
-		return new Arc2D.Float(55, 305, 45, 120, 2, 360, Arc2D.OPEN);
+		return new Arc2D.Float(30, 215, 35, 90, 2, 360, Arc2D.OPEN);
 	}
 }

@@ -18,9 +18,9 @@ public class FrontBot extends AbstractDigiBot
 						
 		headShape = new Path2D.Float();
 		headShape.moveTo(0, 0);
-		headShape.lineTo(150, 0);
-		headShape.lineTo(150, 150);
-		headShape.lineTo(0, 150);
+		headShape.lineTo(200, 0);
+		headShape.lineTo(200, 200);
+		headShape.lineTo(0, 200);
 		headShape.lineTo(0, 0);
 		headShape.closePath();
 				
@@ -32,11 +32,11 @@ public class FrontBot extends AbstractDigiBot
 	{
 		Path2D.Float frontNeck = new Path2D.Float();
 		
-		frontNeck.moveTo(30, 150);
-		frontNeck.lineTo(120, 150);
-		frontNeck.lineTo(120, 165);
-		frontNeck.lineTo(30, 165);
-		frontNeck.lineTo(30, 150);
+		frontNeck.moveTo(40, 200);
+		frontNeck.lineTo(160, 200);
+		frontNeck.lineTo(160, 220);
+		frontNeck.lineTo(40, 220);
+		frontNeck.lineTo(40, 200);
 		frontNeck.closePath();
 		
 		return frontNeck;
@@ -47,20 +47,18 @@ public class FrontBot extends AbstractDigiBot
 	{
 		Path2D.Float frontTorso = new Path2D.Float();
 		
-		frontTorso.moveTo(15, 165);
-		frontTorso.lineTo(135, 165);
-		frontTorso.lineTo(135, 360);
-		frontTorso.lineTo(15, 360);
-		frontTorso.lineTo(15, 165);
+		frontTorso.moveTo(20, 220);
+		frontTorso.lineTo(180, 220);
+		frontTorso.lineTo(180, 480);
+		frontTorso.lineTo(20, 480);
+		frontTorso.lineTo(20, 220);
 		frontTorso.closePath();
 		
 		return frontTorso;
 	}
-	
-	
 		
 	public Shape getWheel()
 	{
-		return new Arc2D.Float(55, 305, 45, 120, 2, 360, Arc2D.OPEN);
+		return new Arc2D.Float(30, 215, 35, 90, 2, 360, Arc2D.OPEN);
 	}
 }
