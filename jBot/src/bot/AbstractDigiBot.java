@@ -2,6 +2,8 @@ package bot;
 
 import java.awt.*;
 import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.ListIterator;
 
 import io.*;
 import visual.statik.*;
@@ -18,6 +20,7 @@ public abstract class AbstractDigiBot extends visual.statik.CompositeContent
 						
 		//checks to see if view of bot being constructed has a face
 		boolean hasFace = false;
+		
 		if(facePath != null)
 			hasFace = true;
 				
@@ -64,12 +67,14 @@ public abstract class AbstractDigiBot extends visual.statik.CompositeContent
 		
 		finder = ResourceFinder.createInstance(this);
 		factory = new visual.statik.sampled.ContentFactory(finder);
-		face = factory.createContent(facePath, 4);
+		face = factory.createContent(facePath, 4, true);
+		face.setLocation(50, 50);
 		
 		compositeHead = new CompositeContent();
 		
 		compositeHead.add(headShape);
 		compositeHead.add(face);
+		
 		
 		
 		return compositeHead;		
